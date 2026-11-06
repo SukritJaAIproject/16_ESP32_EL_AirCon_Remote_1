@@ -9,19 +9,19 @@ var distance = require('gps-distance')
 //storage
 // var gcloud = require('google-cloud');
 // var gcs = gcloud.storage({
-//     projectId: 'database-test-277802',
+//     projectId: 'YOUR_FIREBASE_PROJECT_ID',
 //     keyFilename: './keyfile.json'
 //   });
 const {Storage} = require('@google-cloud/storage');
 const storage = new Storage({ keyFilename: './keyfile.json' })
-const bucketName = 'database-test-277802.appspot.com';
-// const storage = gcs.bucket('database-test-277802.appspot.com')
+const bucketName = 'YOUR_FIREBASE_PROJECT_ID.appspot.com';
+// const storage = gcs.bucket('YOUR_FIREBASE_PROJECT_ID.appspot.com')
 // ----------------------------------------------------------------------
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://database-test-277802.firebaseio.com",
-    // storageBucket: "database-test-277802.appspot.com"
+    databaseURL: "https://YOUR_PROJECT.firebaseio.com",
+    // storageBucket: "YOUR_FIREBASE_PROJECT_ID.appspot.com"
 });
 
 // -----------------------------
