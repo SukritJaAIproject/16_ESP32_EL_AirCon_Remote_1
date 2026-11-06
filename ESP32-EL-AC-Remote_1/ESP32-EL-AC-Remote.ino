@@ -21,8 +21,8 @@ TaskHandle_t OnOffControlFunction;
 #include <Wire.h>
 #include "SparkFun_SCD30_Arduino_Library.h"
 //------------------------------------------------------------------------------
-#define FIREBASE_HOST "database-test-277802.firebaseio.com"
-#define FIREBASE_AUTH "qJLp1qMmrlROZweNrHZ8FWpZjjx2MHLxxxxxxxxx"
+#define FIREBASE_HOST "YOUR_PROJECT.firebaseio.com"
+#define FIREBASE_AUTH "YOUR_FIREBASE_DATABASE_SECRET"
 //Define Firebase Data object
 FirebaseData firebaseData;
 FirebaseJson json;
@@ -40,19 +40,19 @@ int pirStat = 0;
 #define ldrPin 36
 int ldrVal;
 //------------------------------------------------------------------------------
-String url = "https://us-central1-database-test-277802.cloudfunctions.net/fromEsp32";
+String url = "https://us-central1-YOUR_FIREBASE_PROJECT_ID.cloudfunctions.net/fromEsp32";
 //------------------------------------------------------------------------------
 //Connection
-char auth[] = "aN223q_9Hh4ww-yDoizZ4P6V74flZ1dv";
+char auth[] = "YOUR_BLYNK_AUTH_TOKEN";
 char pass[] = "11082501";
 //set time parameter
 int timezone = 7 * 3600;                    //setting Thailand time-zone
 int dst = 0;                                //setting data swing time
 String timeTostring;                        //setting time data as string
-//const char* ssid     = "Woodito";          // The SSID (name) of the Wi-Fi network you want to connect to
-//const char* password = "13572468";        // The password of the Wi-Fi network
-const char* ssid     = "wutdito";          // The SSID (name) of the Wi-Fi network you want to connect to
-const char* password = "11082501";        // The password of the Wi-Fi network
+//const char* ssid     = "YOUR_WIFI_SSID";          // The SSID (name) of the Wi-Fi network you want to connect to
+//const char* password = "YOUR_WIFI_PASSWORD";        // The password of the Wi-Fi network
+const char* ssid     = "YOUR_WIFI_SSID";          // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "YOUR_WIFI_PASSWORD";        // The password of the Wi-Fi network
 //------------------------------------------------------------------------------
 //Blynk button
 boolean   OnOffButton;                          // On/Off
